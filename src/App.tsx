@@ -74,7 +74,7 @@ const App = () => {
     <GlobalStyle />
     <Wrapper>
       <h1>REACT QUIZ</h1>
-      {gameOver || userAnswers.length == TOTAL_QUESTIONS ? ( // If game is over or user is on last question
+      {gameOver || userAnswers.length === TOTAL_QUESTIONS ? ( // If game is over or user is on last question
         <button className="start" onClick={startTrivia}>
           Start
         </button>
