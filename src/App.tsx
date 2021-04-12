@@ -4,6 +4,8 @@ import { fetchQuizQuestions } from "./components/API";
 import QuestionCard from "./components/QuestionCard";
 // Types
 import { QuestionState, Difficulty } from "./components/API";
+// Styles
+import  {GlobalStyle} from './App.styles';
 
 export type AnswerObject = {
   question: string;
@@ -68,6 +70,8 @@ const App = () => {
   };
 
   return (
+    <>
+    <GlobalStyle />
     <div className="app">
       <h1>REACT QUIZ</h1>
       {gameOver || userAnswers.length == TOTAL_QUESTIONS ? ( // If game is over or user is on last question
@@ -85,6 +89,7 @@ const App = () => {
         </button>
       ) : null}
     </div>
+    </>
   );
 };
 
