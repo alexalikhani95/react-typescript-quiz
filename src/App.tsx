@@ -75,7 +75,7 @@ const App = () => {
           Start
         </button>
       ) : null}
-      {!gameOver ? <p className="score">Score:</p> : null}
+      {!gameOver ? <p className="score">Score: {score} </p> : null}
       {loading && <p>Loading Questions...</p>}
       {!loading && !gameOver && <QuestionCard questionNr={number + 1} totalQuestions={TOTAL_QUESTIONS} question={questions[number].question} answers={questions[number].answers} userAnswer={userAnswers ? userAnswers[number] : undefined} callback={checkAnswer} />}
       {/* // If the game is not over, not loading and when user answers, show next question as +1 indicates user has answered as array of answers starts at 0 index*/}
